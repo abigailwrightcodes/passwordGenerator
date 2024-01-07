@@ -44,22 +44,6 @@ function generatePassword() {
     passwordIncludes = passwordIncludes.concat(numericCharacters);
   }
 
-function generatePassword() {
-  var options = getPasswordOptions();
-  var passwordIncludes = lowerCasedCharacters;
-
-  if (options.includesUppercase) {
-    passwordIncludes = passwordIncludes.concat(upperCasedCharacters);
-  }
-
-  if (options.includesSpecial) {
-    passwordIncludes = passwordIncludes.concat(specialCharacters);
-  }
-
-  if (options.includesNumber) {
-    passwordIncludes = passwordIncludes.concat(numericCharacters);
-  }
-
   var generatedPassword = '';
   for (var i = 0; i < options.length; i++) {
     var randomChar = getRandom(passwordIncludes);
